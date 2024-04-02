@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-	items: null,
+	items: [],
 	dataLoadState: null,
 	dataLoadError: null,
 }
@@ -11,7 +11,7 @@ export const wikiSlice = createSlice({
 	initialState,
 	reducers: {
 		setItems: (state, action) => {
-			state.items = action.payload.items;
+			state.items = action.payload.results;
 		},
 		updateLoadState: (state,action) => {
       state.dataLoadState = action.payload.state;

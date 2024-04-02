@@ -8,7 +8,6 @@ export const getWiki = () => {
 			const response = await axios.get(`https://rickandmortyapi.com/api/character/?page=1`);
 			dispatch( updateLoadState({state:2,error:null}) );
 			dispatch(setItems(response.data));
-			console.log(response.data);
 		}
 		catch(err) {
 			dispatch( updateLoadState({state:3,error:err.message}) );

@@ -13,7 +13,8 @@ const Main = () => {
 
 	useEffect(() => {
 		dispatch(getWiki());
-	}, [])
+	}, []);
+
 
 	return (
 			<div className="App">
@@ -23,7 +24,11 @@ const Main = () => {
     				Filter component will be placed here
     				<div className="col-lg-8 col-12">
       				<div className="row">
-        			Card component will be placed here
+							{ (status.dataLoadState===0) && "No Characters Found :/" }
+							{ (status.dataLoadState===1) && "Loading" }
+							{ (status.dataLoadState===2) && items.map((item, index) => <Card key={index} data={item} />) }
+							{ (status.dataLoadState===4) && "Error" }
+        			
       				</div>
     				</div>
   				</div>
