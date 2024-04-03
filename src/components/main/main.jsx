@@ -4,6 +4,8 @@ import './main.css';
 import { getWiki } from '../actions/wiki';
 import Card from '../card/card';
 import Search from "../search/search";
+import Pagination from "../pagination/pagination";
+import { setCurrentPage } from "../../redux/wikiSlice";
 
 
 const Main = () => {
@@ -11,23 +13,24 @@ const Main = () => {
 	const dispatch = useDispatch();
 	const items = useSelector(state => state.wiki.items);
 	const status = useSelector(state => state.wiki);
-	const [pageNumber, setPageNumber] = useState(1);
+	const currentPage = useSelector(state => state.wiki.currentPage);
+
 	const [searchValue, setSearchValue] = useState("");
 
 	useEffect(() => {
-		dispatch(getWiki(searchValue, pageNumber));
-	}, []);
+		dispatch(getWiki(searchValue, currentPage));
+	}, [currentPage]);
 
 	function searchHandler() {
-		setPageNumber(1);
-		dispatch(getWiki(searchValue, pageNumber))
+		dispatch(setCurrentPage(1));
+		dispatch(getWiki(searchValue, currentPage))
 	}
 
 
 	return (
 			<div className="App">
   			<h1 className="text-center mb-3">Characters</h1>
-				<Search setSearchValue={setSearchValue} setPageNumber={setPageNumber} searchHandler={searchHandler}/>
+				<Search setSearchValue={setSearchValue} searchHandler={searchHandler}/>
   			<div className="container">
   				<div className="row">
     				Filter component will be placed here
@@ -45,6 +48,7 @@ const Main = () => {
     				</div>
   				</div>
  				 </div>
+				 <Pagination />
 			</div>		
 	);
 };
