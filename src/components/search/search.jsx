@@ -15,6 +15,11 @@ const Search = ({ setSearchValue, setPageNumber, searchHandler }) => {
     setPageNumber(1);
     setSearchValue(eo.target.value);
   		}}
+		onKeyDown={(eo) => {
+			if (eo.key === 'Enter') 
+			searchHandler();
+			} 
+		}
   	placeholder="Search for characters"
   	className={styles.input}
   	type="text"

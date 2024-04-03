@@ -34,7 +34,10 @@ const Main = () => {
     				<div className="col-lg-8 col-12">
       				<div className="row">
 							{ (status.dataLoadState===0) && "No Characters Found :/" }
-							{ (status.dataLoadState===1) && "Loading" }
+							{ (status.dataLoadState===1) && 
+							<div className="d-flex justify-content-center">
+								<div className="spinner-grow text-primary" role="status"></div>
+							</div> }
 							{ (status.dataLoadState===2) && items.map((item, index) => <Card key={index} data={item} />) }
 							{ (status.dataLoadState===4) && "Error" }
         			
