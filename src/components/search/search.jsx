@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from "./Search.module.scss";
 
-const Search = ({ setSearchValue, searchHandler }) => {
+const Search = ({ searchValue, setSearchValue, searchHandler }) => {
 
 	const searchBtn = (eo) => {
     eo.preventDefault();
@@ -22,6 +22,7 @@ const Search = ({ setSearchValue, searchHandler }) => {
   	placeholder="Search for characters"
   	className={styles.input}
   	type="text"
+		value={searchValue}
 		/>
 		<button
   		onClick={searchBtn}

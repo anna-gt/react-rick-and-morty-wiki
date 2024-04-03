@@ -30,7 +30,7 @@ const Main = () => {
 	return (
 			<div className="App">
   			<h1 className="text-center mb-3">Characters</h1>
-				<Search setSearchValue={setSearchValue} searchHandler={searchHandler}/>
+				<Search searchValue={searchValue} setSearchValue={setSearchValue} searchHandler={searchHandler}/>
   			<div className="container">
   				<div className="row">
     				Filter component will be placed here
