@@ -25,12 +25,22 @@ const Main = () => {
 		dispatch(setCurrentPage(1));
 		dispatch(getWiki(searchValue, currentPage))
 	}
+	function resetHandler() {
+		dispatch(setCurrentPage(1));
+		setSearchValue("");
+		dispatch(getWiki("", currentPage))
+	}
 
 
 	return (
 			<div className="App">
   			<h1 className="text-center mb-3">Characters</h1>
-				<Search searchValue={searchValue} setSearchValue={setSearchValue} searchHandler={searchHandler}/>
+				<Search 
+				searchValue={searchValue} 
+				setSearchValue={setSearchValue} 
+				searchHandler={searchHandler}
+				resetHandler={resetHandler}
+				/>
   			<div className="container">
   				<div className="row">
     				Filter component will be placed here

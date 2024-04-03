@@ -1,12 +1,16 @@
 import React from 'react';
 import styles from "./Search.module.scss";
 
-const Search = ({ searchValue, setSearchValue, searchHandler }) => {
+const Search = ({ searchValue, setSearchValue, searchHandler, resetHandler }) => {
 
 	const searchBtn = (eo) => {
     eo.preventDefault();
 		searchHandler();
   };
+	const resetBtn = (eo) => {
+		eo.preventDefault();
+		resetHandler();
+	}
 
 	return (
 		<form
@@ -28,6 +32,11 @@ const Search = ({ searchValue, setSearchValue, searchHandler }) => {
   		onClick={searchBtn}
   		className={`${styles.btn} btn btn-primary fs-5`}>
   		Search
+		</button>
+		<button
+  		onClick={resetBtn}
+  		className={`${styles.btn} btn btn-primary fs-5`}>
+  		Reset
 		</button>
   </form>
 	);
