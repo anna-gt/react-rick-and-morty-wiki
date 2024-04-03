@@ -33,17 +33,15 @@ const Card = ({data}) => {
 						);
 					} else {
 						return (
-							<div
-								className={`${styles.badge} position-absolute badge bg-secondary`}
-							>
+							<div className={`${styles.badge} position-absolute badge bg-secondary`}>
 								{status}
 							</div>
 						);
 					}
-				})()}	
-						</div>					
+				})()}
+						</div>
 					);
 };
 
 
-export default Card;
+export default React.memo(Card);
