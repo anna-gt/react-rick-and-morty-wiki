@@ -3,7 +3,7 @@ import styles from "./Card.module.scss";
 
 const Card = ({data}) => {
 
-	let {id, image, name, status, location} = data;
+	const {id, image, name, status, location} = data;
 
 	return (
 		<div  key={id} className="col-lg-4 col-md-6 col-sm-6 col-12 mb-4 position-relative text-dark">
