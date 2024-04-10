@@ -1,25 +1,33 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-	items: [],
 	dataLoadState: null,
 	dataLoadError: null,
+	info: [],
+	residents: [],
+	result: [],
 }
 
 export const locationSlice = createSlice({
 	name: 'location',
 	initialState,
 	reducers: {
-		setItems: (state, action) => {
-			state.items = action.payload.results;
+		setResult: (state, action) => {
+			state.result = action.payload;
 		},
 		updateLoadState: (state,action) => {
       state.dataLoadState = action.payload.state;
       state.dataLoadError = action.payload.error;
     },
+		setInfo: (state, action) => {
+			state.info = action.payload
+		},
+		setResidents: (state, action) => {
+			state.residents = action.payload
+		}
 	}
 })
 
-export const { setItems, updateLoadState } = locationSlice.actions;
+export const { setResult, updateLoadState, setInfo, setResidents } = locationSlice.actions;
 
 export default locationSlice.reducer;

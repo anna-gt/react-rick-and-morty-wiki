@@ -15,7 +15,6 @@ const Episodes = () => {
 
 	useEffect(() => {
 		dispatch(getEpisodesInfo());
-		console.log(totalCount)
 	}, [])
 
 	useEffect(() => {
