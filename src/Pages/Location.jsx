@@ -40,7 +40,7 @@ const Location = () => {
 					</div>
 					<div className="col-lg-8 col-12">
 						<div className="row">
-							{residents.map ((resident, index) => <Card key={index} data={resident}/>)}
+							{residents.map ((resident, index) => <Card page="/location/" key={index} data={resident}/>)}
 						</div>
 					</div>
 				</div>

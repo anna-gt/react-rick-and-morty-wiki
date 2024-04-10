@@ -39,7 +39,7 @@ const Episodes = () => {
 					</div>
 					<div className="col-lg-8 col-12">
 						<div className="row">
-							{characters.map ((character, index) => <Card key={index} data={character}/>)}
+							{characters.map ((character, index) => <Card page="/episodes/" key={index} data={character}/>)}
 						</div>
 					</div>
 				</div>

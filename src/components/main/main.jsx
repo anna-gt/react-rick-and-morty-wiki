@@ -61,7 +61,7 @@ const Main = () => {
 							<div className="d-flex justify-content-center">
 								<div className="spinner-grow text-primary" role="status"></div>
 							</div> }
-							{ (loadStatus.dataLoadState===2) && items.map((item, index) => <Card key={index} data={item} />) }
+							{ (loadStatus.dataLoadState===2) && items.map((item, index) => <Card page="/" key={index} data={item} />) }
 							{ (loadStatus.dataLoadState===4) && "Error" }
         			
       				</div>
