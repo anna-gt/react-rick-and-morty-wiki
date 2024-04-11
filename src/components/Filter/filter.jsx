@@ -33,4 +33,4 @@ const Filter = ({setStatus, setGender, setSpecies}) => {
 	);
 };
 
-export default Filter;
+export default React.memo(Filter);

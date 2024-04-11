@@ -29,4 +29,4 @@ const FilterBtn = ({ input, task, index, name }) => {
 	);
 };
 
-export default FilterBtn;
+export default React.memo(FilterBtn);

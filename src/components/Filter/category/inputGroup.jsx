@@ -20,4 +20,4 @@ const InputGroup = ({ name, changeID, total }) => {
 	);
 };
 
-export default InputGroup;
+export default React.memo(InputGroup);

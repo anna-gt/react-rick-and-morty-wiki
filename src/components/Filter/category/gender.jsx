@@ -29,4 +29,4 @@ const Gender = ({setGender}) => {
 };
 
 
-export default Gender;
+export default React.memo(Gender);

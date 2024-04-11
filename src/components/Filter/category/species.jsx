@@ -32,4 +32,4 @@ const Species = ({setSpecies}) => {
 	);
 };
 
-export default Species;
+export default React.memo(Species);
