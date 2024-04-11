@@ -24,7 +24,7 @@ const Main = () => {
 
 	useEffect(() => {
 		dispatch(getWiki(searchValue, currentPage, status, gender, species));
-	}, [currentPage, status, gender, species]);
+	}, [status, gender, species]);
 
 	function searchHandler() {
 		dispatch(setCurrentPage(1));
@@ -33,7 +33,7 @@ const Main = () => {
 	function resetHandler() {
 		dispatch(setCurrentPage(1));
 		setSearchValue("");
-		dispatch(getWiki("", currentPage))
+		dispatch(getWiki("", currentPage, status, gender, species))
 	}
 
 
