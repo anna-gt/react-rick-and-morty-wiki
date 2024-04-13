@@ -39,7 +39,7 @@ const Main = () => {
 
 	return (
 			<div className="App">
-  			<h1 className="text-center mb-3">Characters</h1>
+  			<h1 className="text-center mb-3" data-testid="characters-page">Characters</h1>
 				<Search 
 				searchValue={searchValue} 
 				setSearchValue={setSearchValue} 

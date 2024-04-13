@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import styles from './navbar.module.scss';
+// import styles from './navbar.module.scss';
 
 const Navbar = () => {
 	return (
@@ -25,7 +25,7 @@ const Navbar = () => {
 						className="collapse navbar-collapse justify-content-end"
 						id="navbarNavAltMarkup"
 					> <div className="navbar-nav fs-5">
-							<NavLink to="/" className="nav-link">
+							<NavLink to="/" className="nav-link" data-testid="characters-link">
 								Characters
 							</NavLink>
 							<NavLink to="/episodes" className="nav-link">

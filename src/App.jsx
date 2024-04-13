@@ -1,12 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes} from 'react-router-dom';
+import React from "react";
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Main from "./components/main/main";
 import Navbar from "./components/navbar/navbar";
-import CardDetails from "./components/card/cardDetails";
-import Episodes from "./Pages/Episodes";
-import Location from "./Pages/Location";
+import AppRouter from "./components/router/AppRouter";
 
 function App() {
 
@@ -16,14 +13,7 @@ function App() {
         <Navbar />
       </div>
 			<div className="container">
-				<Routes>
-					<Route path='/' element={<Main />} />
-					<Route path="/episodes" element={<Episodes />} />
-  				<Route path="/location" element={<Location />} />
-					<Route path="/:id" element={<CardDetails />} />
-					<Route path="/episodes/:id" element={<CardDetails />} />
-					<Route path="/location/:id" element={<CardDetails />} />
-				</Routes>
+				<AppRouter />
 			</div>
 		</BrowserRouter>
   )
