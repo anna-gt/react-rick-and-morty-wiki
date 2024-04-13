@@ -62,7 +62,7 @@ const Main = () => {
 								<div className="spinner-grow text-primary" role="status"></div>
 							</div> }
 							{ (loadStatus.dataLoadState===2) && items.map((item, index) => <Card page="/" key={index} data={item} />) }
-							{ (loadStatus.dataLoadState===4) && "Error" }
+							{ (loadStatus.dataLoadState===3) && "No Characters Found :/" }
         			
       				</div>
     				</div>
