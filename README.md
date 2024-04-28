@@ -1,3 +1,5 @@
+Try it! https://anna-gt.github.io/react-rick-and-morty-wiki/
+
 # React + Vite
 
 To run the app use: <br />
